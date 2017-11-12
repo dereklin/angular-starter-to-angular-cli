@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+
+
+ul.nav {
+  margin-top: 1px;
+}
+.side-bar {
+  background-color: $nav-background-color;
+  color: $nav-text-color;
+  height: 100%;
+}

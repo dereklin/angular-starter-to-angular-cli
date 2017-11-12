@@ -1,0 +1,13 @@
+<div>
+    <p-dataTable [value]="tableData" selectionMode="single" [responsive]="true">
+        <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.headerName">
+          <ng-template  pTemplate="header">
+            {{ col.headerName }}
+          </ng-template>
+          <ng-template let-col let-data="rowData" pTemplate="body">
+            {{ displayData(data, col.field ) }}
+          </ng-template>          
+        </p-column>
+    </p-dataTable>
+</div>
+

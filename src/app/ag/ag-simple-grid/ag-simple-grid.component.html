@@ -1,0 +1,6 @@
+<ag-grid-table
+  [rowData] = "studentTableData$ | async"
+  [gridOptions]="gridOptions"
+  [extraOptions]="extraOptions"
+  [selectedRow]="selectedStudent$ | async"
+></ag-grid-table>

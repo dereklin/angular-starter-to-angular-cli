@@ -1,0 +1,16 @@
+<button (click)="sendInputEvent()">Clear typeahead popup</button>
+<hr>
+
+<ng-template #rt let-result="result" let-term="term" let-formatter="formatter">
+  <my-ngb-highlight [result]="formatter(result)" [term]="term"></my-ngb-highlight>
+</ng-template>
+
+<input #typeaheadSearchBox type="text" 
+  class="form-control" 
+  [(ngModel)]="model" 
+  [ngbTypeahead]="search" 
+  [resultTemplate]="rt" 
+  (click)="onClick()"
+  />
+<hr>
+<pre>Model: {{ model | json }}</pre>
